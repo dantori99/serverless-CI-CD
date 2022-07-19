@@ -1,0 +1,17 @@
+org: danieldev
+app: automated-deployment
+service: automated-deployment
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  region: ap-northeast-1 #tokyo
+  runtime: nodejs14.x
+
+functions:
+  hello:
+    handler: function.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
