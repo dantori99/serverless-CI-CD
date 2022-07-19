@@ -4,8 +4,13 @@ frameworkVersion: '3'
 
 provider:
   name: aws
-  region: ap-northeast-1 #tokyo
   runtime: nodejs14.x
+  memorySize: 512
+  stage: ${opt:stage, 'dev'}
+  region: ap-southeast-1
+  tracing:
+    apiGateway: true
+    lambda: true
 
 functions:
   hello:
