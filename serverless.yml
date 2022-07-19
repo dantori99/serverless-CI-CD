@@ -1,4 +1,3 @@
-org: danieldev
 app: automated-deployment
 service: automated-deployment
 frameworkVersion: '3'
